@@ -19,7 +19,7 @@ for ix, gender_x in enumerate(['M', 'F']):
     age_clus2cond_prev, age_clus2cond_exclu = {}, {}
     for i, age_group_i in enumerate(age_group):
         num_cluser_ix = age_gender2nk[str(age_group_i) + '_' + gender_x]
-        df_complete_i = pd.read_csv('./data/multcond_samples_' + str(age_group_i[0]) + '_' + str(age_group_i[1]) + '_' + gender_x + '.csv', header=0)
+        df_complete_i = pd.read_csv('./data/cond_vector/multcond_samples_' + str(age_group_i[0]) + '_' + str(age_group_i[1]) + '_' + gender_x + '.csv', header=0)
         n_pat = df_complete_i.shape[0]
         df_prev_i = df_complete_i[cond_date_list].sum(axis=0) / n_pat
 

@@ -19,7 +19,7 @@ if __name__ == "__main__":
     results = {'n_components': [], 'aic': [], 'bic': [], 'caic': [], 'entropy': [], 'relative_entropy': [], 'll': [], 'converged': [], 'age_group': [], 'gender': []}
 
     for gender_x in ['M', 'F']:
-        df_complete_i = pd.read_csv('./data/cond_vector/mult_cond_samples_' + str(age_group_i[0]) + '_' + str(age_group_i[1]) + '_' + gender_x + '.csv', header=0)  # Condition vectors for multimorbid population in this stratum
+        df_complete_i = pd.read_csv('./data/cond_vector/multcond_samples_' + str(age_group_i[0]) + '_' + str(age_group_i[1]) + '_' + gender_x + '.csv', header=0)  # Condition vectors for multimorbid population in this stratum
         df_i = df_complete_i[cond_date_list]
         n_divergence = 0
         for n_component_k in n_components:
@@ -36,7 +36,7 @@ if __name__ == "__main__":
             df_class_ik_distribution = pd.concat((df_i[cond_date_list], df_label_ik), axis=1)
             df_class_ik_distribution = df_class_ik_distribution.groupby('label')[cond_date_list].sum()
             df_class_ik_distribution = df_class_ik_distribution.transpose()  # Transpose to have 'label' as columns and conditions as row index
-            df_class_ik_distribution.to_csv('./results/' + args.age_dir + 'lca_' + args.fin_prefix + str(age_group_i[0]) + '_' + str(age_group_i[1]) + '_' + gender_x + '_' + str(n_component_k) + '_df_cond_distribution.csv', index=True)  # Condition distribution within clusters
+            df_class_ik_distribution.to_csv('./results/' + 'lca_' + str(age_group_i[0]) + '_' + str(age_group_i[1]) + '_' + gender_x + '_' + str(n_component_k) + '_df_cond_distribution.csv', index=True)  # Condition distribution within clusters
 
             results['n_components'].append(n_component_k)
             results['aic'].append(model.aic(df_i))
