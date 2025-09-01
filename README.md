@@ -1,9 +1,9 @@
-# Identifying profiles, trajectories, burden, social and biological factors in 3.3 million individuals with multimorbidity in England
+# Identifying profiles, trajectories, social and biological factors in 3.3 million individuals with multimorbidity in England
 
 This repository houses all the python scripts utilized in both multimorbidity profile identification and clinical marker relevance identification as detailed in our study.
 
 ## Background
-Multimorbidity, the co-occurrence of multiple chronic conditions in an individual, has become a global health challenge affecting populations in high-income and low- to middle-income countries. Despite its increasing prevalence, critical gaps remain in understanding its progression, burden, and determinants to better guide prevention and treatment. Here, by leveraging linked primary care, hospitalisation, and mortality records from 3.3 million individuals with multimorbidity in England, we conducted a longitudinal cohort study to characterise multimorbidity across multiple dimensions, including condition profiling, progression trajectories, healthcare burden, and social and biological factors.
+Multimorbidity, the co-occurrence of multiple chronic conditions in an individual, has become a global health challenge affecting populations in high-income and low- to middle-income countries. Despite its increasing prevalence, critical gaps remain in understanding its progression, burden, and determinants to better guide prevention and treatment. Here, by leveraging linked primary care, hospitalisation, and mortality records from 3.3 million individuals with multimorbidity in England, we conducted a longitudinal cohort study to characterise multimorbidity across multiple dimensions, including condition profiling, progression trajectories, social and biological factors.
 
 ## System Requirements
 
@@ -47,10 +47,9 @@ This script:
 - Combines clusters identified in different age bands through hierarchical clustering
 - Generates comprehensive profile definitions that span the life course
 
-### Trajectory, Burden and Social Factors
+### Trajectory and Social Factors
 As we have mapped each individual to a multimorbidity profile in each age band, we can now derive the following:
 - **Trajectory**: An individual’s multimorbidity trajectory is defined by the sequence of profiles to which they belong across successive age bands.
-- **Burden**: For each profile and age band, we calculate three burden metrics of mortality rate, hospitalisation rate and hospitalisation prevalence, using the corresponding outcome data of all individuals assigned to that profile.
 - **Social Factors**: By stratifying the cohort by key social determinants (e.g. socioeconomic deprivation, ethnicity, geographic region), we compute the prevalence of each multimorbidity profile within each subgroup.
 
 ### Identify Relevant Markers to Each Multimorbidity Profile
