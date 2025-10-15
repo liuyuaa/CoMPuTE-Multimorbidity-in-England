@@ -1,4 +1,4 @@
-# Identifying profiles, trajectories, social and biological factors in 3.3 million individuals with multimorbidity in England
+# Identifying profiles, trajectories, burden, social and biological factors in 3.3 million individuals with multimorbidity in England
 
 This repository houses all the python scripts utilized in both multimorbidity profile identification and clinical marker relevance identification as detailed in our study.
 
